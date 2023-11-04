@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+  <title>⚙ SOME导航
+</title>  
+
+ <!-- 引入 Bootstrap 样式 -->
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+ 
+ 
+  <style>/* 搜索框样式 */
+input[type="text"] {
+  
+}
+
+/* 选择框样式 */
+select {width: 1%;
+  }
+
+/* 按钮样式 */
+button {
+  
+}
+    /* 为表单增加一些间距 */
+    form {
+      margin-top: 20px;
+    }
+  
+
+        /* 添加CSS样式 */
+        body {
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        /* 侧边栏按钮样式 */
+
+.sidebar-btn {background-color: rgba(250, 250, 250, 0.3);
+   cursor: pointer;
+   display: block;
+   position: fixed;
+   z-index: 9999;
+   top: 30px;
+   right: 20px;
+   width: 40px;
+   height: 40px;border: none;border-radius: 25px;
+}
+.sidebar-btn span {
+   background: #333;
+   display: block;
+   height: 3px;
+   margin: 5px auto;
+   position: relative;
+   width: 100%;
+   transition: all 0.3s ease-in-out;
+}/* 侧边栏内容样式 */
+.sidebar {
+border-radius: 30px;
+line-height: 2;
+text-align: center;
+   background: #fff;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   height: 100%;
+   overflow-y: scroll;
+   position: fixed;
+   top: 0;
+   right: -300px;
+   width: 300px;
+   z-index: 9998;
+   transition: all 0.3s ease-in-out;
+}
+
+.sidebar.active {
+   right: 0;
+}
+        .container {
+background-image: url(' http://tse4-mm.cn.bing.net/th/id/OIP-C.HV2dIoWfmb-CkWr86vdUtQHaHB?pid=ImgDet&dpr=3 ');
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 29px;
+        }
+           .ulcontainer {
+       
+           line-height: 2.5; /* 设置行高为2倍，增加行距 */
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(250, 250, 250, 0.8); /* 半透明灰色背景 */
+            padding: 20px;
+            border-radius: 30px;
+        }
+        
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h2 {text-align: center;
+            color: #fff;
+            margin-top: 40px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        
+        
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        li {
+            margin-bottom: 10px;
+            
+            align-items: center;
+        }
+        a {
+            
+            padding: 5px 10px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            transition: background-color 0.3s ease;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+background-color: #fff;
+        }
+        
+        input[type="text"] {
+            width: 20%;
+            
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body><div class="sidebar-btn">
+   <button class="sidebar-btn btn-style"><span></span>
+   <span></span>
+   <span></span></button>
+</div>
+
+
+<!-- 侧边栏内容 -->
+<div class="sidebar">
+  <h1><p>   </p></h1>
+
+<h3>1.服务</h3>
+ <ul>
+      <li><a href="#">首页</a></li>
+      <li><a href="#">关于</a></li>
+      <li><a href="#">产品</a></li>
+      <li><a href="#">服务</a></li>
+      <li><a href="#">联系</a></li>
+   </ul>
+   <div class="sidebar-widgets">
+      <h3>2.最新</h3>
+      <ul>
+         <li><a href="#">标题</a></li>
+         <li><a href="#">标题</a></li>
+         <li><a href="#">标题</a></li>
+      </ul>
+   </div>
+   
+</div>
+    <div class="container">
+        
+    <div class="container-fluid">
+    <h1 class="mt-3">⚙ SOME导航</h1>
+
+    <form id="search-form" method="GET" target="_blank">
+      <div class="row">
+        <div class="col-sm-4">
+          <!-- 搜索引擎选择下拉菜单 -->
+          <select id="search-engine" class="form-select mb-2">
+<option value="https://www.bing.com/search?q=">必应</option>
+            <option value="https://search.ecnu.cf/search?q=">谷歌</option>
+            <option value="https://www.baidu.com/s?word=">百度</option>
+            <option value="http://chii.in/subject_search/">番组计划</option>
+<option value="https://weixin.sogou.com/weixinwap?ie=utf8&type=2&pg=webSearchList&_sug_=y&_sug_type_=&query=">微信</option>
+<option value="https://www.zhihu.com/search?q=">知乎</option>
+<option value="https://search.ecnu.cf/search?q=site:bgm.tv ">bgm搜</option>
+          </select>
+        </div>
+        <div class="col-sm-8">
+          <!-- 搜索输入框和按钮 -->
+          <div class="input-group mb-2">
+            <input type="text" name="q" class="form-control" placeholder="输入关键词...">
+            <button type="submit" class="btn btn-primary">搜索</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+        
+        
+        
+<h2>①元站</h2><div class="ulcontainer">
+<ul>
+    <a href="https://bilibili.com">B站-bilibili</a>
+    
+<a href="https://bgm.tv">班固米番组计画</a>//<a href="www.douban.com">豆瓣</a>
+    <a href="https://zh.moegirl.org.cn">萌娘百科</a>
+    
+<a href="https://bbs.saraba1st.com/2b/forum.php?mod=forumdisplay&amp;fid=6&amp;page=1&amp;mobile=no">Stage 1</a>//<a href="https://bbs.saraba1st.com/2b/forum.php?mobile=2">触版</a>
+
+</ul></div>
+
+<h2>②工具类</h2><div class="ulcontainer">
+<ul>
+    <a href="https://github.com/">GitHub</a>
+    
+<a href="https://github.com/xx025/carrot">Chatgpt集合</a>//<a href="https://chat18.aichatos.xyz/">例</a>
+    
+<a href="https://bing.com">必应Bing</a>
+    
+<a href="https://www.croxy.network/_zh/?continueFlag=2d1545526415d745faa68c7309718162">外冲浪</a>
+    
+<a href="https://app.keeweb.info/">keepass</a>
+    
+<a href="https://github.com/EstrellaXD/Auto_Bangumi">AutoBangumi</a>
+    
+<a href="http://js.jirengu.com/?html,output">JSBIN</a>
+    
+<a href="https://github.com/bangumi-users/awesome-bangumi">BGM相关的坑</a>
+    
+<a href="https://wiki.ukenn.top/">PT</a>
+    
+<a href="https://greasyfork.org/zh-CN">脚本</a>
+    
+<a href="https://mofa.cf/archives/">魔法咖</a>
+    
+<a href="https://www.wikipedia.ecnu.cf/">维基百科</a>//<a href="https://zh.m.wikipedia.ecnu.cf/wiki/Wikipedia:%E9%A6%96%E9%A1%B5">M</a>
+    
+<p>RSS版：<a href="www.innoreader.com">Innoreader</a>
+</ul></p>
+</div>
+<h2>③社交类</h2><div class="ulcontainer">
+<ul>
+    <a href="https://account.microsoft.com">微软帐号</a>
+    
+<a href="https://mail.qq.com">QQ邮箱</a>
+</ul></div>
+
+<h2>④观看下载类</h2><div class="ulcontainer">
+<h3>1.动画</h3>
+<p>观看:</p>
+<ul>
+    <a href="www.mfan.tv">萌fan</a>
+    
+<a href="https://skr.cc">桜漫</a>
+    
+<a href="https://dick.xfani.com/">稀饭</a>
+    
+<a href="https://www.nyafun.net/">Nyafun</a>
+    
+<a href="https://www.gugufan.com/">咕咕</a>
+    
+<a href="https://animoe.org/">Animoe</a>
+    
+<a href="https://libvio.app/">Libvio</a>
+</ul>
+<p>下载:</p>
+<ul>
+    <a href="https://www.dongmanhuayuan.com/">动漫花园镜像</a>//<a href="https://dongmanhuayuan.myheartsite.com">同步</a>
+    
+<a href="https://portal.waaa.moe/?page_id=160">Waaa镜像</a>
+</ul>
+
+<h3>2.影视</h3>
+<ul>
+    <a href="https://ymck.me/">影猫の仓库</a>
+</ul>
+
+<h3>3.综合</h3>
+<ul>
+    <a href="https://www.wenku8.net/modules/article/search.php?searchtype=articlename&amp;searchkey=">文库吧</a>
+    
+<a href="https://m.huahuo6.com/">花火文学</a>
+    
+<a href="https://www.dandanplay.com/">弹弹play</a>
+    
+比特慧星
+    
+Motrix
+</ul></div>
+
+<h2>⑤云游戏类</h2><div class="ulcontainer">
+<ul>
+    <a href="https://y.4399.com/">4399云游戏</a>
+    
+<a href="https://www.migufun.com">咪咕快游</a>
+    
+<a href="https://cg.163.com">网易云游戏</a>
+</ul></div>
+
+<h2>⑥资源整合类</h2><div class="ulcontainer">
+<ul>
+    <a href="https://yftdtddh.github.io/muxizyhz/">木晞i</a>/<a href="http://chii.in/blog/319400">资源贴集合</a>
+    
+<a href="http://chii.in/blog/321493">好物汇blog</a>
+    
+<a href="https://all.cc">桜岛</a>
+</ul></div>
+
+<h2>⑦资讯类</h2><div class="ulcontainer">
+<ul>
+    <a href="https://m.huxiu.com">虎嗅</a>
+</ul></div>
+
+<h2>⑧趣站类</h2><div class="ulcontainer">
+<ul>
+    <a href="https://www.typingclub.com/">type</a>
+    
+<a href="https://github.com/freefq/free">freefq</a>
+    
+<a href="https://www.acg.gy/">琉璃</a>
+    
+<a href="https://sspai.com/post/70438">banπ</a>
+    
+<a href="https://windrises.net/bgmtools/multitag">多标搜</a>//<a href="https://chii.ai/search">新1</a>//<a href="https://cityhunter.me/">2</a>
+    
+<a href="https://m.bilibili.com/video/BV1Bp4y1D747?p=2">阿飞老师</a>
+    
+<a href="https://bangumi-app.5t5.top/iframe.html?viewMode=story&amp;id=screens-discovery--discovery">bgm-webapp</a>
+    
+<a href="http://www.clover.ly/#projects">Clover</a>
+</ul></div>
+
+      
+    </div>
+    
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+  <script>
+    document.getElementById("search-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // 阻止表单默认提交行为
+
+      var selectedEngine = document.getElementById("search-engine").value;
+      var searchQuery = document.querySelector("#search-form input[name='q']").value;
+
+      window.open(selectedEngine + "" + encodeURIComponent(searchQuery));
+    });
+var sidebarBtn = document.querySelector('.sidebar-btn');
+var sidebar = document.querySelector('.sidebar');
+
+sidebarBtn.addEventListener('click', function () {
+   sidebar.classList.toggle('active');
+});
+var links = document.getElementsByTagName("a"); for (var i = 0; i < links.length; i++) { links[i].setAttribute("target", "_blank"); }
+</script>
+        
+</body>
+  </html>
