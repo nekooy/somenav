@@ -4,14 +4,32 @@
 <head><meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">  
-  <title>⚙ SOME导航|somenav
+   <title>⚙ SOME导航|somenav
 </title>  
 
  <!-- 引入 Bootstrap 样式 -->
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
  
-  <style>/* 搜索框样式 */
+  <style>
+   .back-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      padding: 10px;
+      background-color: #f44336;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      border-radius: 50%;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+    }
+
+    .back-button:hover {
+      background-color: #ff7500;
+    } 
+    /* 搜索框样式 */
 #search-engine {
   width: auto; /* 设置为适应内容宽度 */
   max-width: 81.2px; /* 设置最大宽度 */
@@ -143,7 +161,8 @@ background-color: #ff7500;
 </head>
   
           
-<body><div class="sidebar-btn">
+<body>  <a href="https://some-z.github.io" class="back-button"><i class="fas fa-arrow-left"></i></a>
+  <div class="sidebar-btn">
    <button class="sidebar-btn btn-style"><span></span>
    <span></span>
    <span></span></button>
@@ -359,6 +378,9 @@ sidebarBtn.addEventListener('click', function () {
 });
 var links = document.getElementsByTagName("a"); for (var i = 0; i < links.length; i++) { links[i].setAttribute("target", "_blank"); }
 </script>
+ <script src="https://www.github.com/some-z/some-z.github.io/js/scroll.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>    
+
         
 </body>
   </html>
