@@ -13,17 +13,16 @@
  
   <style>
    .back-button {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      padding: 10px;
-      background-color: #f44336;
-      color: white;
-      font-size: 20px;
-      text-decoration: none;
-      border-radius: 50%;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-      z-index: 9999;
+      background-color: rgba(250, 250, 250, 0.3);
+   cursor: pointer;
+   display: block;
+   position: fixed;
+   z-index: 9999;
+   font-size: 20px;
+   top: 30px;
+   left: 20px;
+   width: 40px;
+   height: 40px;border: none;border-radius: 25px;
     }
 
     .back-button:hover {
@@ -71,6 +70,9 @@ button {
    width: 40px;
    height: 40px;border: none;border-radius: 25px;
 }
+    .sidebar-btn:hover {
+      background-color: #ff7500;
+    } 
 .sidebar-btn span {
    background: #333;
    display: block;
@@ -378,7 +380,7 @@ sidebarBtn.addEventListener('click', function () {
 });
 var links = document.getElementsByTagName("a"); for (var i = 0; i < links.length; i++) { links[i].setAttribute("target", "_blank"); }
 </script>
- <script src="https://www.github.com/some-z/some-z.github.io/js/scroll.js"></script>
+ <script src="https://some-z.github.io/js/scroll.js"></script>
 <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>    
 
         
