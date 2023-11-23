@@ -153,7 +153,7 @@ text-align: center;
     color: white;
     text-decoration: none;
     border-radius: 7px;
-    transition: background-color 0.3s ease;
+    
 }
 
 .ulcontainer a:hover {
@@ -165,38 +165,61 @@ text-align: center;
       text-align: center;
        } 
     
-/* 设置链接的基本样式 */
-.sidebar-link {
+
+
+/* 设置链接的默认样式 */
+.sidebar a {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  color: #333; /* 链接文字颜色 */
-  transition: color 0.3s; /* 颜色变化的过渡效果 */
+  color: #333;
+  transition: background-color 0.3s ease;
+  position: relative;
 }
 
-/* 设置链接的悬停效果 */
-.sidebar-link:hover {
-  color: #ff6600; /* 悬停时的链接文字颜色 */
-  background-color: #f4f4f4; /* 悬停时的背景颜色 */
+/* 鼠标悬停时的样式 */
+.sidebar a:hover {
+  background-color: #f4f4f4;
+  color: #ff6600;
 }
 
-/* 设置链接的图标样式 */
-.sidebar-link.search::before {
-  content: "\1F50D"; /* Unicode 图标代码，可以更换为其他图标 */
-  margin-right: 5px;
-  font-size: 18px;
+/* 添加下划线效果 */
+.sidebar a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background-color: #ff6600;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-/* 设置外部链接的图标样式 */
-.sidebar-link.external::after {
-  content: "\279C"; /* Unicode 图标代码，可以更换为其他图标 */
-  margin-left: 5px;
+.sidebar a:hover:after {
+  width: 100%;
 }
 
-/* 设置底部边框 */
-.sidebar-link:last-child {
-  border-bottom: 1px solid #ddd; /* 底部边框样式 */
+/* 添加图标 */
+.sidebar a:before {
+  content: "\f0c9";
+  font-family: FontAwesome;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #ff6600;
 }
+
+/* 添加斜体样式 */
+.sidebar em {
+  font-style: italic;
+}
+
+/* 添加分割线 */
+.sidebar a:not(:last-child):after {
+  width: 100%;
+  background-color: #ccc;
+}
+
 
     </style>
 </head>
