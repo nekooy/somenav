@@ -164,6 +164,40 @@ text-align: center;
        .centered {text-shadow: 1px 1px 4px #fff;
       text-align: center;
        } 
+    
+/* 设置链接的基本样式 */
+.sidebar-link {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333; /* 链接文字颜色 */
+  transition: color 0.3s; /* 颜色变化的过渡效果 */
+}
+
+/* 设置链接的悬停效果 */
+.sidebar-link:hover {
+  color: #ff6600; /* 悬停时的链接文字颜色 */
+  background-color: #f4f4f4; /* 悬停时的背景颜色 */
+}
+
+/* 设置链接的图标样式 */
+.sidebar-link.search::before {
+  content: "\1F50D"; /* Unicode 图标代码，可以更换为其他图标 */
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+/* 设置外部链接的图标样式 */
+.sidebar-link.external::after {
+  content: "\279C"; /* Unicode 图标代码，可以更换为其他图标 */
+  margin-left: 5px;
+}
+
+/* 设置底部边框 */
+.sidebar-link:last-child {
+  border-bottom: 1px solid #ddd; /* 底部边框样式 */
+}
+
     </style>
 </head>
   
