@@ -1,1 +1,300 @@
-<html><body><p>hello world</p></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOME导航</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+         
+            color: #333;
+            margin: 0;
+            padding: 0;
+background-image: url('https://images4.alphacoders.com/135/1351193.jpeg'); /* 这里填入背景图片的路径 */
+    background-size: cover; /* 使背景图片覆盖整个页面 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+    background-position: center center; /* 使背景图片居中 */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            
+        }
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+color:#EC7063;
+        }
+.header-placeholder {
+    height: 125px; /* 这个高度应与 header 的高度一致 */
+}
+.tpog{position: fixed;
+    top: 0;
+    width: 100%; /* 使标题占据全宽 */
+    background-color: white; /* 背景色，防止文字重叠 */
+    z-index: 1000; /* 确保标题在最上层 */
+    padding: 10px 0; /* 给标题一些上下内边距 */
+    text-align: center; /* 使标题居中 */background-color: #fff;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);}
+        header tpog form {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        header select, header input[type="text"] {
+            padding: 10px;
+            margin-right: 10px;
+            font-size: 12px;
+            border: 4px solid #EC7063;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        header input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 12px;
+            cursor: pointer;
+            background-color: #EC7063;
+            color: #fff;
+            border: 3px solid #EC7063;
+            border-radius: 8px;
+            transition: background-color 0.1s;
+        }
+        header input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .ulcontainer {
+            margin-bottom: 20px;
+        }
+        .ulcontainer ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .ulcontainer ul li {
+            flex: 1 1 calc(33.333% - 10px);
+            box-sizing: border-box;
+        }
+        .ulcontainer ul a {
+            display: block;
+            padding: 10px;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: background-color 0.1s;
+        }
+        .ulcontainer ul a:hover {
+            background-color: #F5B7B1;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        nav {
+            margin-top: 10px;
+            background-color: #fff;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        nav ul li {
+            flex: 1 1 calc(25% - 5px);
+            box-sizing: border-box;
+        }
+        nav ul a {border: 1px solid #fff;
+            display: block;
+            padding: 5px;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            transition: background-color 0.1s;
+        }
+        nav ul a:hover {
+            background-color: #F5B7B1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+       <div class="tpog"> <h1>SOME导航</h1>  <p>
+      <span id="busuanzi_container_site_uv">
+  你是第<span id="busuanzi_value_site_uv"></span>个访问本站的小可爱
+        </span> 
+    </p>   
+        <form onsubmit="return search()">
+            <select id="search-engine">
+                <option value="https://www.bing.com/search?q=">必应</option>
+                <option value="https://google/search?q=">谷歌</option>
+                <option value="https://www.baidu.com/s?word=">百度</option>
+                <option value="http://bgm.tv/subject_search/">番组计划</option>
+                <option value="https://weixin.sogou.com/weixinwap?ie=utf8&type=2&pg=webSearchList&_sug_=y&_sug_type_=&query=">微信</option>
+                <option value="https://www.zhihu.com/search?q=">知乎</option>
+                <option value="https://search.ecnu.cf/search?q=site:bgm.tv">bgm搜</option>
+            </select>
+            <input type="text" id="query" placeholder="输入搜索内容">
+            <input type="submit" value="搜索">
+        </form></div><div class="header-placeholder"></div>
+        <nav><p>目录-点击跳转：</p>
+            <ul>
+                <li><a href="#category-1">①元站</a></li>
+                <li><a href="#category-2">②工具类</a></li>
+                <li><a href="#category-3">③社交类</a></li>
+                <li><a href="#category-4">④观看下载类</a></li>
+                <li><a href="#category-5">⑤游戏类</a></li>
+                <li><a href="#category-6">⑥资源整合类</a></li>
+                <li><a href="#category-7">⑦资讯类</a></li>
+                <li><a href="#category-8">⑧趣站类</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="container">
+            <h2 id="category-1">①元站</h2>
+            <div class="ulcontainer">
+                <ul>
+                    <li><a href="https://bilibili.com">B站-bilibili</a></li>
+                    <li><a href="https://bgm.tv">班固米</a></li>
+                    <li><a href="https://www.douban.com">豆瓣</a></li>
+                    <li><a href="https://zh.moegirl.org.cn">萌娘百科</a></li>
+                    <li><a href="https://bbs.saraba1st.com/2b/forum.php?mod=forumdisplay&amp;fid=6&amp;page=1&amp;mobile=no">Stage 1</a></li>
+                    <li><a href="https://bbs.saraba1st.com/2b/forum.php?mobile=2">触版</a></li>
+                    <li><a href="https://rebang.today/home?tab=zhihu">今热榜</a></li>
+                </ul>
+            </div>
+            <h2 id="category-2">②工具类</h2>
+            <div class="ulcontainer">
+                <ul>
+                    <li><a href="https://github.com/">GitHub</a></li>
+                    <li><a href="https://bing.com">必应Bing</a></li>
+                    <li><a href="https://www.croxy.network/_zh/?continueFlag=2d1545526415d745faa68c7309718162">外冲浪</a></li>
+                    <li><a href="https://greasyfork.org/zh-CN">脚本</a></li>
+                    <li><a href="https://www.wikipedia.ecnu.cf/">维基百科</a></li>
+                    <li><a href="https://zh.m.wikipedia.ecnu.cf/wiki/Wikipedia:%E9%A6%96%E9%A1%B5">M</a></li>
+                    <li><a href="https://github.com/xx025/carrot">Chatgpt集合</a></li>
+                    <li><a href="https://chat18.aichatos.xyz/">例1</a></li>
+                    <li><a href="https://chat-shared3.zhile.io/shared.html?v=2">例2</a></li>
+                    <li><a href="https://xmfgpt.com">例3</a></li>
+                    <li><a href="https://www.innoreader.com">Innoreader</a></li>
+                    <li><a href="https://app.keeweb.info/">keepass</a></li>
+                    <li><a href="https://github.com/EstrellaXD/Auto_Bangumi">AutoBangumi</a></li>
+                    <li><a href="http://js.jirengu.com/?html,output">JSBIN</a></li>
+                    <li><a href="https://github.com/bangumi-users/awesome-bangumi">BGM相关的坑</a></li>
+                    <li><a href="https://wiki.ukenn.top/">PT</a></li>
+                    <li><a href="https://mofa.cf/archives/">魔法咖</a></li>
+                </ul>
+            </div>
+            <h2 id="category-3">③社交类</h2>
+            <div class="ulcontainer">
+                                <ul>
+                    <li><a href="https://account.microsoft.com">微软帐号</a></li>
+                    <li><a href="https://mail.qq.com">QQ邮箱</a></li>
+                    <li><a href="https://outlook.live.com/">Outlook</a></li>
+                </ul>
+            </div>
+            <h2 id="category-4">④观看下载类</h2>
+            <div class="ulcontainer">
+                <h3>1. 动画</h3>
+                <p>观看:</p>
+                <ul>
+                    <li><a href="https://www.mitang.tv">萌fan</a></li>
+                    <li><a href="https://skr.cc">桜漫</a></li>
+                    <li><a href="https://dick.xfani.com/">稀饭</a></li>
+                    <li><a href="https://www.nyafun.net/">Nyafun</a></li>
+                    <li><a href="https://www.gugufan.com/">咕咕</a></li>
+                    <li><a href="https://animoe.org/">Animoe</a></li>
+                    <li><a href="https://libvio.app/">Libvio</a></li>
+                </ul>
+                <p>下载:</p>
+                <ul>
+                    <li><a href="https://www.dongmanhuayuan.com/">动漫花园镜像</a></li>
+                    <li><a href="https://dongmanhuayuan.myheartsite.com">同步</a></li>
+                    <li><a href="https://portal.waaa.moe/?page_id=160">Waaa镜像</a></li>
+                </ul>
+                <h3>2. 影视</h3>
+                <ul>
+                    <li><a href="https://ymck.me/">影猫の仓库</a></li>
+                </ul>
+                <h3>3. 综合</h3>
+                <ul>
+                    <li><a href="https://www.wenku8.net/modules/article/search.php?searchtype=articlename&searchkey=">文库吧</a></li>
+                    <li><a href="https://m.huahuo6.com/">花火文学</a></li>
+                    <li><a href="https://www.dandanplay.com/">弹弹play</a></li>
+                    <li><a href="https://btxiang.com/">比特慧星</a></li>
+                    <li><a href="https://motrix.app/">Motrix</a></li>
+                </ul>
+            </div>
+            <h2 id="category-5">⑤游戏类</h2>
+            <div class="ulcontainer">
+                <ul>
+                    <li><a href="https://y.4399.com/">4399云游戏</a></li>
+                    <li><a href="https://www.migufun.com">咪咕快游</a></li>
+                    <li><a href="https://cg.163.com">网易云游戏</a></li>
+                </ul>
+            </div>
+            <h2 id="category-6">⑥资源整合类</h2>
+            <div class="ulcontainer">
+                <ul>
+                    <li><a href="https://yftdtddh.github.io/muxizyhz/">木晞i</a></li>
+                    <li><a href="http://chii.in/blog/319400">资源贴集合</a></li>
+                    <li><a href="http://chii.in/blog/321493">好物汇blog</a></li>
+                    <li><a href="https://all.cc">桜岛</a></li>
+                </ul>
+            </div>
+            <h2 id="category-7">⑦资讯类</h2>
+            <div class="ulcontainer">
+                <ul>
+                    <li><a href="https://m.huxiu.com">虎嗅</a></li>
+                </ul>
+            </div>
+            <h2 id="category-8">⑧趣站类</h2>
+            <div class="ulcontainer">
+                <ul>
+                    <li><a href="https://www.typingclub.com/">type</a></li>
+                    <li><a href="https://sspai.com/post/70438">banπ</a></li>
+                    <li><a href="https://windrises.net/bgmtools/multitag">多标搜</a></li>
+                    <li><a href="https://chii.ai/search">新1</a></li>
+                    <li><a href="https://cityhunter.me/">2</a></li>
+                    <li><a href="https://m.bilibili.com/video/BV1Bp4y1D747?p=2">阿飞老师</a></li>
+                    <li><a href="https://bangumi-app.5t5.top/iframe.html?viewMode=story&id=screens-discovery--discovery">bgm-webapp</a></li>
+                    <li><a href="http://www.clover.ly/#projects">Clover</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function search() {
+            var engine = document.getElementById('search-engine').value;
+            var query = document.getElementById('query').value;
+            if (query) {
+                window.location.href = engine + encodeURIComponent(query);
+                return false;
+            }
+            return false;
+        }
+    </script></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</body>
+</html>
+
