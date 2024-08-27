@@ -171,19 +171,41 @@ text-align: center;
     
 
 
-/* 设置链接的默认样式 */
-.sidebar a {
-  display: block;
-  text-decoration: none;
-  color: blue;
-  transition: background-color 0.3s ease;
-  position: relative;
+/* 设置sidebar链接的默认样式 */
+.sidebar {
+  display: flex; /* 使用 flexbox */
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 水平居中 */
 }
 
-/* 鼠标悬停时的样式 */
-.sidebar a:hover {
-  background-color: #f4f4f4;
-  color: #ff6600;
+.sidebar a {
+  display: block; /* 使链接成为块级元素 */
+  text-decoration: none;
+  color: #FFA500;
+  position: relative;
+  text-align: left; /* 左对齐文本 */
+  padding: 10px 15px; /* 添加内边距 */
+  width: 100%; /* 使链接宽度占满容器 */
+  max-width: 300px; /* 可选：设置最大宽度 */
+}
+
+/* 添加上划线效果 */
+.sidebar a:before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: transparent; /* 默认透明 */
+  transition: background-color 0.3s ease; /* 添加背景色过渡 */
+  position: absolute;
+  top: 0; /* 上划线位置 */
+  left: 0;
+  z-index: -1; /* 确保在文本后面 */
+}
+
+/* 悬停时显示上划线 */
+.sidebar a:hover:before {
+  background-color: #ff6600; 
 }
 
 /* 添加下划线效果 */
@@ -193,29 +215,37 @@ text-align: center;
   height: 2px;
   width: 0%;
   background-color: #ff6600;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease; /* 添加下划线过渡 */
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
+/* 悬停时显示下划线 */
 .sidebar a:hover:after {
   width: 100%;
 }
 
 /* 添加图标 */
-.sidebar a:before {
-  content: "\f0c9";
+.sidebar a .icon {
   font-family: FontAwesome;
   margin-right: 10px;
   font-size: 16px;
   color: #ff6600;
+  transition: color 0.3s ease; /* 添加颜色过渡 */
+}
+
+/* 悬停时改变图标颜色 */
+.sidebar a:hover .icon {
+  color: #ff3300; 
 }
 
 /* 添加斜体样式 */
 .sidebar em {
   font-style: italic;
+  color: #666; /* 改变斜体文字颜色 */
 }
+
 
 
 
@@ -243,15 +273,15 @@ text-align: center;
       <li><a href="https://nekooy.github.io">Nekooy博客</a></li>
       <li><a href="shili.html">产品</a></li>
       <li><a href="2.md">联系</a></li>
-   </ul>
-   <div class="sidebar-widgets">
+   
+   
       <h3>2.最新</h3>
-      <ul>
+      
          <li><a href="#">标题</a></li>
          <li><a href="#">标题</a></li>
          <li><a href="#">标题</a></li>
       </ul>
-   </div>
+   
    
 </div>
     <h1>●SOME导航●</h1>
